@@ -4,9 +4,8 @@ const { join } = require("path");
 const { createReadStream, createWriteStream, existsSync } = require("fs");
 const chalk = require('chalk');
 const { log, warn } = console;
-const { installPkgs, filterPkgs } = require("../utils");
+const { installPkgs, filterPkgs, resolveApp } = require("../utils");
 
-const resolveApp = relativePath => join(process.cwd(), relativePath);
 const addFilePath = [ ".prettierrc", ".eslintrc.js", ".eslintignore", ".editorconfig" ];
 let createFiles = [];
 

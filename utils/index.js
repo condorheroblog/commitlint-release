@@ -1,4 +1,3 @@
-const { resolveApp } = require("../utils");
 const { resolve } = require("path");
 const chalk = require("chalk");
 const fs = require("fs");
