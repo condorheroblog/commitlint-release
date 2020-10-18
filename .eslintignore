@@ -1,0 +1,7 @@
+# public
+/public
+# package-lock
+/package-lock.json
+# md文件
+**/*.md
+/dist

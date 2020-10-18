@@ -1,0 +1,38 @@
+# YAML 语言教程: http://www.ruanyifeng.com/blog/2016/07/yaml.html
+
+# https://prettier.io/
+
+# 声明结尾使用分号(默认true)
+semi: true
+# useTabs 代码缩进是否用制表符tab，默认false
+useTabs: true
+# tab的宽度，默认值是2
+tabWidth: 2
+# 使用单引号（默认false）
+singleQuote: true
+# 每行代码长度（默认80）
+printWidth: 80
+# JSX标签闭合位置 默认false
+# false: <div
+#          className=""
+#          style={{}}
+#       >
+# true: <div
+#          className=""
+#          style={{}} >
+jsxBracketSameLine: false
+
+# Prettier可以在文件的顶部插入一个 @format的特殊注释，以表明改文件已经被Prettier格式化过了，默认false。
+insertPragma: true
+# 在对象字面量声明所使用的的花括号后（{）和前（}）输出空格，默认 true
+bracketSpacing: true
+# 多行时尽可能打印尾随逗号便于继续输入，单行数组永远不会得到尾随逗号。默认：es5
+trailingComma: "es5"
+
+# 集成 VS CODE
+# 只需要下载 prettier 的插件就可以了,在插件市场搜索可以直接搜索到
+# 下面是愉快使用的相关配置
+# editor.formatOnPaste: Boolean //粘贴时自动格式化
+# editor.formatOnSave: Boolean //保存时自动格式化(推荐这种)
+# editor.formatOnType: Boolean //键入一行后是否格式化
+# editor.formatOnSaveTimeout: Int //保存后延时格式化

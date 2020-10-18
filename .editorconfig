@@ -1,0 +1,33 @@
+# 官网：https://editorconfig.org
+
+# 对应编辑器应该安装的插件链接🔗：https://github.com/editorconfig/
+
+# VSCode 应该安装 EditorConfig for VS Code
+
+# 告诉EditorConfig插件，这是根文件，不用继续往上查找
+root = true
+
+# 匹配全部文件
+[*]
+# 设置字符集
+charset = utf-8
+# 缩进风格，可选"space"、"tab"
+indent_style = space
+# 缩进的空格数
+indent_size = 2
+# tab的宽度
+# tab_width = 4
+# 结尾换行符，可选"lf"、"cr"、"crlf"
+end_of_line = lf
+# 在文件结尾插入新行
+insert_final_newline = true
+# 删除一行中的前后空格
+trim_trailing_whitespace = true
+
+# 匹配.md后缀的文件
+[*.md]
+insert_final_newline = false
+trim_trailing_whitespace = false
+
+
+# 配置完成，项目文件写完直接保存，此配置即可生效
