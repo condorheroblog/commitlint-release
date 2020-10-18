@@ -5,9 +5,7 @@ const path = require("path");
 const chalk = require('chalk');
 const pkg = require("../package.json");
 const { filterPkgs, resolveApp, installPkgs } = require("../utils");
-
 const log = console.log;
-
 
 function printHelp(code = 0) {
   const lines = [
@@ -57,6 +55,8 @@ function start(isCover) {
     });
   };
 
+  // 读取工程中的 package.json
+  const appPkg = require(resolveApp("./package.json")) || {};
   // 添加相关配置到项目package.json中
   // 添加config配置
   appPkg.config = {
