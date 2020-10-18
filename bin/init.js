@@ -46,11 +46,15 @@ function start(isCover) {
     installPkgs(pkgs).then(function () {
       log(chalk.green("依赖安装完成！"));
         log(chalk.greenBright([
-          '你可以运行 以下命令:',
+          '你可以尝试一次 commit 提交，来看看 husky 是否正常工作',
           '',
-          '`npm run changelog`: 生成changelog',
-          '`npm run commit`: 用于代替`git commit`提交，并自动执行`git add.`和`npm run changelog`',
+          '如果没有触发 husky,请运行命令 `rm -rf .git/hooks/ && npm i -D husky`',
           '',
+          '你也可以运行 以下命令:',
+          '',
+          '`npm run changelog`: 生成 CHANGELOG.md 文件',
+          '`npm run commit`: 用于代替`git add . & git commit` 提交',
+          '更多命令请去项目 package.json 文件中查看 ✌️',
         ].join('\n')));
     });
   };
