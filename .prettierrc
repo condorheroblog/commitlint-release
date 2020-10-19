@@ -9,7 +9,7 @@ useTabs: true
 # tab的宽度，默认值是2
 tabWidth: 2
 # 使用单引号（默认false）
-singleQuote: true
+singleQuote: false
 # 每行代码长度（默认80）
 printWidth: 80
 # JSX标签闭合位置 默认false

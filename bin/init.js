@@ -73,15 +73,18 @@ function start(isCover) {
   // 添加husky钩子
   if (appPkg.husky) {
     if (appPkg.husky.hooks) {
+      appPkg.husky.hooks["pre-commit"] = "npm run format";
       appPkg.husky.hooks["commit-msg"] = "commitlint -E HUSKY_GIT_PARAMS";
     } else {
       appPkg.husky.hooks = {
+        "pre-commit": "npm run format",
         "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
       };
     };
   } else {
     appPkg.husky = {
       "hooks": {
+        "pre-commit": "npm run format",
         "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
       }
     };

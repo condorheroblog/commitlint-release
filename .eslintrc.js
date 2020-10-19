@@ -32,10 +32,14 @@ module.exports = {
           "ImportDeclaration": 1,
           "ignoredNodes": [ "ConditionalExpression" ]
       }],
-      // 不允许尾随逗号
-      "comma-dangle": [ "error", "never" ],
-      // 数组空格
-      "array-bracket-spacing": [ "error", "always" ],
+      // 当最后一个元素或属性与闭括号 ] 或 } 在 不同的行时，允许（但不要求）使用拖尾逗号；当在 同一行时，禁止使用拖尾逗号
+      "comma-dangle": [ "error", "only-multiline" ],
+      // 数组空格 prettier 没有关于这个的配置忍痛注掉
+      // "array-bracket-spacing": [ "error", "always", {
+      //   "singleValue": false,
+      //   "objectsInArrays": false,
+      //   "arraysInArrays": false
+      // }],
       // 对象空格
       "object-curly-spacing": [ "error", "always" ],
       // 箭头函数间距样式

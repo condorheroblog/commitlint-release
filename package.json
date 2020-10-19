@@ -45,6 +45,7 @@
   },
   "husky": {
     "hooks": {
+      "pre-commit": "npm run format",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
@@ -60,6 +61,7 @@
   "scripts": {
     "release": "standard-version",
     "commit": "git-cz",
+    "format": "prettier --write 'src/**/*.{ts,json,md,yml,js,jsx}'",
     "changelog": "conventional-changelog --config ./lib/log -i CHANGELOG.md -s -r 0"
   }
 }
