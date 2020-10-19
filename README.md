@@ -95,7 +95,6 @@ npm run format      # 使用 prettier 格式化指定目录的代码
 npm run push:dev    # 自己写的脚本命令
 ```
 
-
 ## 自动更新版本号并生成 `changelog`
 
 ```
@@ -114,7 +113,7 @@ npm run publish
 
 格式化命令：`npm run format`
 
-主要是使用 prettier 插件来格式化指定目录的代码，prettier 有一套固定的格式话代码规则，但是这些规则大部分都不可以给我们自定义，只有灰常少的一小部分可以自己配置，可以配置的规则在此 [Options](https://prettier.io/docs/en/options.html) ，虽然 prettier 格式化规则较为霸道，但是格式化完还是很好看的，所以多人协作牺牲一点个人写代码的风格还是可以接受的，既然 prettier 负责代码风格，那么 ESlint，就主要用来检查代码质量（例如变量未定义不允许使用等），和补充 prettier 没有照顾到的代码风格（补充的千万不能和prettier规则冲突）（例如：注释和代码不能在同一行）。
+主要是使用 prettier 插件来格式化指定目录的代码，prettier 有一套固定的格式话代码规则，但是这些规则大部分都不可以给我们自定义，只有灰常少的一小部分可以自己配置，可以配置的规则在此 [Options](https://prettier.io/docs/en/options.html) ，虽然 prettier 格式化规则较为霸道，但是格式化完还是很好看的，所以多人协作牺牲一点个人写代码的风格还是可以接受的，既然 prettier 负责代码风格，那么 ESlint，就主要用来检查代码质量（例如变量未定义不允许使用等），和补充 prettier 没有照顾到的代码风格（补充的千万不能和 prettier 规则冲突）（例如：注释和代码不能在同一行）。
 
 ## commit 规范
 

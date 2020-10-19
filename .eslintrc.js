@@ -32,15 +32,15 @@ module.exports = {
 		// 注释符号前后加空格
 		"spaced-comment": ["error", "always", { exceptions: ["*"] }],
 		// 变量驼峰命名
-		"camelcase": "off",
+		camelcase: "off",
 		// 代码不省略花括号
-		"curly": "error",
+		curly: "error",
 		// 禁止出现未使用过的变量
 		"no-unused-vars": [
 			"error",
 			// we are only using this rule to check for unused arguments since TS
 			// catches unused variables but not args.
-			{ varsIgnorePattern: '.*', args: 'none' }
+			{ varsIgnorePattern: ".*", args: "none" },
 		],
 		// 缩进
 		// indent: [
