@@ -1,7 +1,6 @@
 #!/usr/bin/env node
-/** @format */
-
 const { join } = require("path");
+const fs = require("fs");
 const { createReadStream, createWriteStream, existsSync } = require("fs");
 const chalk = require("chalk");
 const { log, warn } = console;
@@ -46,6 +45,24 @@ appPkg.scripts = {
 	...(appPkg.scripts || {}),
 	format: "prettier --write 'src/**/*.{ts,tsx,json,md,yml,js,jsx,scss,less,stylus,vue}'",
 };
+// 添加husky钩子
+if (appPkg.husky) {
+	if (appPkg.husky.hooks) {
+		appPkg.husky.hooks["pre-commit"] = "npm run format && git add .";
+	} else {
+		appPkg.husky.hooks = {
+			"pre-commit": "npm run format && git add .",
+		};
+	}
+} else {
+	appPkg.husky = {
+		hooks: {
+			"pre-commit": "npm run format && git add .",
+		},
+	};
+}
+// 重新写入package.json
+fs.writeFileSync(resolveApp("./package.json"), JSON.stringify(appPkg, null, 4));
 
 let feedbackInfo = [];
 if (createFiles.length) {

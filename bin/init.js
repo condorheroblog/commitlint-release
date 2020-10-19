@@ -99,7 +99,7 @@ function start(isCover) {
 	};
 
 	// 重新写入package.json
-	fs.writeFileSync(resolveApp("./package.json"), JSON.stringify(appPkg, null, 2));
+	fs.writeFileSync(resolveApp("./package.json"), JSON.stringify(appPkg, null, 4));
 	// 添加commitlint.config.js到项目中
 	fs.createReadStream(path.resolve(__dirname, "../template/commitlint.config.js")).pipe(
 		fs.createWriteStream(resolveApp("./commitlint.config.js"))
