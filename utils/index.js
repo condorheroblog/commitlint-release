@@ -14,7 +14,7 @@ function filterPkgs(willInsPkgs, isCover) {
 
 	// 判断 package.json 文件是否存在
 	if (!fs.existsSync(appPkgPath) || fs.statSync(appPkgPath).isDirectory()) {
-		throw new Error(chalk.red("package.json文件不存在"));
+		throw new Error(chalk.red("error: 项目 package.json 文件不存在 \n 请使用 npm init 来创建文件后在执行命令！"));
 		return;
 	}
 

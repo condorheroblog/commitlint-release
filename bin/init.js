@@ -95,7 +95,6 @@ function start(isCover) {
 		lint: "eslint --ext .js --ext .jsx src/",
 		release: "standard-version",
 		publish: "node scripts/release.js",
-		format: "prettier --write 'src/**/*.{ts,tsx,json,md,yml,js,jsx,scss,less,stylus,vue}'",
 		"push:dev": "node scripts/pushDev.js",
 	};
 
