@@ -1,3 +1,5 @@
+/** @format */
+
 module.exports = {
-  extends: ['./lib/lint']
+	extends: ["./lib/lint"],
 };

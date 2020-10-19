@@ -1,3 +1,5 @@
+/** @format */
+
 module.exports = {
-  extends: ['./node_modules/commitlint-release/lib/lint']
+	extends: ["./node_modules/commitlint-release/lib/lint"],
 };

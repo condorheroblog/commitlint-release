@@ -1,67 +1,71 @@
 {
-  "name": "commitlint-release",
-  "version": "1.0.5",
-  "description": "这是一个集成了 commitizen、commitlint、standard-version、conventional-changelog 、conventional-changelog-cli、eslint、pretties、editorconfig 基础配置的插件。",
-  "keywords": [
-    "commitizen",
-    "commitlint",
-    "@commitlint/cli",
-    "standard-version",
-    "conversin-changelog",
-    "eslint",
-    "pretties",
-    "eslint-plugin-prettier",
-    "eslint-config-prettier"
-  ],
-  "main": "index.js",
-  "author": "Condor Hero",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/condorheroblog/commitlint-release"
-  },
-  "bugs": {
-    "url": "https://github.com/condorheroblog/commitlint-release/issues"
-  },
-  "homepage": "https://github.com/condorheroblog/commitlint-release#readme",
-  "license": "ISC",
-  "devDependencies": {},
-  "dependencies": {
-    "@commitlint/cli": "^11.0.0",
-    "commitizen": "^4.2.1",
-    "conventional-changelog": "^3.1.23",
-    "conventional-changelog-cli": "^2.1.0",
-    "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^7.11.0",
-    "eslint-config-prettier": "^6.12.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "husky": "^4.3.0",
-    "inquirer": "^7.3.3",
-    "longest": "^2.0.1",
-    "prettier": "^2.1.2",
-    "q": "^1.5.1",
-    "right-pad": "^1.0.1",
-    "standard-version": "^9.0.0",
-    "word-wrap": "^1.2.3"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run format",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "bin": {
-    "init-commitlint": "./bin/init.js",
-    "commitlint-mk": "./bin/mk.js"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./lib/cz"
-    }
-  },
-  "scripts": {
-    "release": "standard-version",
-    "commit": "git-cz",
-    "format": "prettier --write 'src/**/*.{ts,json,md,yml,js,jsx}'",
-    "changelog": "conventional-changelog --config ./lib/log -i CHANGELOG.md -s -r 0"
-  }
+	"name": "commitlint-release",
+	"version": "1.0.5",
+	"description": "这是一个集成了 commitizen、commitlint、standard-version、conventional-changelog 、conventional-changelog-cli、eslint、pretties、editorconfig 基础配置的插件。",
+	"keywords": [
+		"commitizen",
+		"commitlint",
+		"@commitlint/cli",
+		"standard-version",
+		"conversin-changelog",
+		"eslint",
+		"pretties",
+		"eslint-plugin-prettier",
+		"eslint-config-prettier"
+	],
+	"main": "index.js",
+	"author": "Condor Hero",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/condorheroblog/commitlint-release"
+	},
+	"bugs": {
+		"url": "https://github.com/condorheroblog/commitlint-release/issues"
+	},
+	"homepage": "https://github.com/condorheroblog/commitlint-release#readme",
+	"license": "ISC",
+	"dependencies": {
+		"chalk": "^4.1.0",
+		"shelljs": "^0.8.4",
+		"inquirer": "^7.3.3",
+		"longest": "^2.0.1",
+		"q": "^1.5.1",
+		"right-pad": "^1.0.1",
+		"word-wrap": "^1.2.3"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^11.0.0",
+		"commitizen": "^4.2.1",
+		"conventional-changelog": "^3.1.23",
+		"conventional-changelog-cli": "^2.1.0",
+		"cz-conventional-changelog": "^3.3.0",
+		"eslint": "^7.11.0",
+		"eslint-config-prettier": "^6.12.0",
+		"eslint-plugin-prettier": "^3.1.4",
+		"husky": "^4.3.0",
+		"standard-version": "^9.0.0",
+		"prettier": "^2.1.2"
+
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "npm run format",
+			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+		}
+	},
+	"bin": {
+		"init-commitlint": "./bin/init.js",
+		"commitlint-mk": "./bin/mk.js"
+	},
+	"config": {
+		"commitizen": {
+			"path": "./lib/cz"
+		}
+	},
+	"scripts": {
+		"release": "standard-version",
+		"commit": "git-cz",
+		"format": "prettier --write '**/*.{ts,tsx,json,md,yml,js,jsx,scss,less,stylus,vue}'",
+		"changelog": "conventional-changelog --config ./lib/log -i CHANGELOG.md -s -r 0"
+	}
 }

@@ -7,11 +7,11 @@ semi: true
 # useTabs 代码缩进是否用制表符tab，默认false
 useTabs: true
 # tab的宽度，默认值是2
-tabWidth: 2
+tabWidth: 4
 # 使用单引号（默认false）
 singleQuote: false
 # 每行代码长度（默认80）
-printWidth: 80
+printWidth: 120
 # JSX标签闭合位置 默认false
 # false: <div
 #          className=""
@@ -23,7 +23,7 @@ printWidth: 80
 jsxBracketSameLine: false
 
 # Prettier可以在文件的顶部插入一个 @format的特殊注释，以表明改文件已经被Prettier格式化过了，默认false。
-insertPragma: true
+# insertPragma: true
 # 在对象字面量声明所使用的的花括号后（{）和前（}）输出空格，默认 true
 bracketSpacing: true
 # 多行时尽可能打印尾随逗号便于继续输入，单行数组永远不会得到尾随逗号。默认：es5
