@@ -44,7 +44,7 @@ const appPkg = require(resolveApp("./package.json")) || {};
 // 动态添加命令到package.json
 appPkg.scripts = {
 	...(appPkg.scripts || {}),
-	format: "prettier --write 'src/**/*.{ts,tsx,json,md,yml,js,jsx,scss,less,stylus,vue}'"
+	format: "prettier --write 'src/**/*.{ts,tsx,json,md,yml,js,jsx,scss,less,stylus,vue}'",
 };
 
 let feedbackInfo = [];
