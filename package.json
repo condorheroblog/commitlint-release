@@ -1,6 +1,6 @@
 {
 	"name": "commitlint-release",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"description": "这是一个集成了 commitizen、commitlint、standard-version、conventional-changelog 、conventional-changelog-cli、eslint、pretties、editorconfig 基础配置的插件。",
 	"keywords": [
 		"commitizen",
